@@ -24,16 +24,27 @@ body{
 }
 ._container{
     max-width: 1200px;
-    margin:5rem auto 0 auto;
+    margin:0 auto ;
 }
 .todo{
     padding: 0 15px;
     box-sizing: content-box;
+    margin-top: 5.5rem;
+    @media (max-width: 415px) {
+        &{
+            margin-top: 1.5rem; 
+        }
+    }
 }
 .todo__title{
     font-family: $fontTitle;
     text-align: center;
     font-size: 3.2rem;
+    @media (max-width: 415px) {
+        &{
+            font-size: 2.6rem; 
+        }
+    }
 }
 .todo__actions{
     @extend %flex;
@@ -41,18 +52,29 @@ body{
     gap: 30px;
     flex-wrap: wrap;
     margin: 2.2rem 0 0 0;
+    @media (max-width: 415px) {
+        &{
+            margin:1.1rem 0 0 0; 
+        }
+    }
 }
 .todo__input{
     position: relative;
+    margin:0 20px;
+    max-width: 100%;
     input{
-      min-width: 22rem;
-      height: 2.9rem;
-      margin:0 10px;
+      max-width: 100%;
+      height: 2.9rem;  
       border-radius: 0.7rem;
       border: 2px solid black;
       padding: 0 3.3rem 0 1.1rem;
       font-size: 1.5rem;
       outline: none;
+      @media (max-width: 415px) {
+            &{
+            height: 2.5rem;
+            }
+        }
     }
     span{
         position: absolute;
@@ -62,10 +84,16 @@ body{
         right: 1rem;
         top: .33rem;
         cursor: pointer;
+        @media (max-width: 415px) {
+            &{
+            top: .17rem;
+            right: .7rem;
+            }
+        }
     }
 }
 .todo__items{
-    width: 40rem;
+    max-width: 40rem;
     margin: 2rem auto 0 auto;
 }
 #tasks{   
@@ -81,6 +109,11 @@ body{
         width: 11px; /* ширина для вертикального скролла */
         height: 8px; /* высота для горизонтального скролла */
         background-color: #EFF6FC;
+    }
+    @media (max-width: 415px) {
+        &{
+            padding: .7rem .7rem;
+        }
     }
 }
 #tasks:hover{
@@ -103,11 +136,18 @@ body{
     border:none;
     padding: .7rem .7rem;
     font-size: 1.7rem;
+    font-family: $fontTitle;
     overflow-wrap: break-word;  
     border-radius: 20px;
     background: #EFF6FC;
     box-shadow:  5px 5px 8px #a3a7ab,
                  -5px -5px 8px #ffffff;
+    @media (max-width: 415px) {
+        &{
+           font-size: 1.1rem; 
+           grid-template-columns: 11rem 1fr;
+        }
+    }
 }
 .buttons{
     display: grid;
@@ -123,6 +163,12 @@ body{
             margin: auto 0 auto 0;  
             width: 2.2rem;
             height: 2.2rem;
+            @media (max-width: 415px) {
+                &{
+                    width: 1.4rem;
+                    height: 1.4rem;
+                }
+            }
         }
     }
 }

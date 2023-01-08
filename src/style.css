@@ -21,34 +21,48 @@ body {
 
 ._container {
   max-width: 1200px;
-  margin: 5rem auto 0 auto; }
+  margin: 0 auto; }
 
 .todo {
   padding: 0 15px;
-  box-sizing: content-box; }
+  box-sizing: content-box;
+  margin-top: 5.5rem; }
+  @media (max-width: 415px) {
+    .todo {
+      margin-top: 1.5rem; } }
 
 .todo__title {
   font-family: "Raleway", sans-serif;
   text-align: center;
   font-size: 3.2rem; }
+  @media (max-width: 415px) {
+    .todo__title {
+      font-size: 2.6rem; } }
 
 .todo__actions {
   flex-direction: row;
   gap: 30px;
   flex-wrap: wrap;
   margin: 2.2rem 0 0 0; }
+  @media (max-width: 415px) {
+    .todo__actions {
+      margin: 1.1rem 0 0 0; } }
 
 .todo__input {
-  position: relative; }
+  position: relative;
+  margin: 0 20px;
+  max-width: 100%; }
   .todo__input input {
-    min-width: 22rem;
+    max-width: 100%;
     height: 2.9rem;
-    margin: 0 10px;
     border-radius: 0.7rem;
     border: 2px solid black;
     padding: 0 3.3rem 0 1.1rem;
     font-size: 1.5rem;
     outline: none; }
+    @media (max-width: 415px) {
+      .todo__input input {
+        height: 2.5rem; } }
   .todo__input span {
     position: absolute;
     background: url(../src/img/add.svg);
@@ -57,9 +71,13 @@ body {
     right: 1rem;
     top: .33rem;
     cursor: pointer; }
+    @media (max-width: 415px) {
+      .todo__input span {
+        top: .17rem;
+        right: .7rem; } }
 
 .todo__items {
-  width: 40rem;
+  max-width: 40rem;
   margin: 2rem auto 0 auto; }
 
 #tasks {
@@ -77,6 +95,9 @@ body {
     height: 8px;
     /* высота для горизонтального скролла */
     background-color: #EFF6FC; }
+  @media (max-width: 415px) {
+    #tasks {
+      padding: .7rem .7rem; } }
 
 #tasks:hover::-webkit-scrollbar {
   background-color: #d5dbe0; }
@@ -95,10 +116,15 @@ body {
   border: none;
   padding: .7rem .7rem;
   font-size: 1.7rem;
+  font-family: "Raleway", sans-serif;
   overflow-wrap: break-word;
   border-radius: 20px;
   background: #EFF6FC;
   box-shadow: 5px 5px 8px #a3a7ab, -5px -5px 8px #ffffff; }
+  @media (max-width: 415px) {
+    .task {
+      font-size: 1.1rem;
+      grid-template-columns: 11rem 1fr; } }
 
 .buttons {
   display: grid;
@@ -114,6 +140,10 @@ body {
       margin: auto 0 auto 0;
       width: 2.2rem;
       height: 2.2rem; }
+      @media (max-width: 415px) {
+        .buttons .done img, .buttons .delete img {
+          width: 1.4rem;
+          height: 1.4rem; } }
 
 .lineThrough {
   text-decoration: line-through; }
