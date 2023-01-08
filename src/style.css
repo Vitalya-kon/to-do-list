@@ -1,0 +1,121 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+.todo__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background: #EFF6FC;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+._container {
+  max-width: 1200px;
+  margin: 5rem auto 0 auto; }
+
+.todo {
+  padding: 0 15px;
+  box-sizing: content-box; }
+
+.todo__title {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-size: 3.2rem; }
+
+.todo__actions {
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 2.2rem 0 0 0; }
+
+.todo__input {
+  position: relative; }
+  .todo__input input {
+    min-width: 22rem;
+    height: 2.9rem;
+    margin: 0 10px;
+    border-radius: 0.7rem;
+    border: 2px solid black;
+    padding: 0 3.3rem 0 1.1rem;
+    font-size: 1.5rem;
+    outline: none; }
+  .todo__input span {
+    position: absolute;
+    background: url(../src/img/add.svg);
+    width: 2.2rem;
+    height: 2.2rem;
+    right: 1rem;
+    top: .33rem;
+    cursor: pointer; }
+
+.todo__items {
+  width: 40rem;
+  margin: 2rem auto 0 auto; }
+
+#tasks {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.7rem;
+  height: 60vh;
+  padding: 1.2rem 1.5rem;
+  overflow-y: scroll;
+  align-items: center;
+  max-width: 100%; }
+  #tasks::-webkit-scrollbar {
+    width: 11px;
+    /* ширина для вертикального скролла */
+    height: 8px;
+    /* высота для горизонтального скролла */
+    background-color: #EFF6FC; }
+
+#tasks:hover::-webkit-scrollbar {
+  background-color: #d5dbe0; }
+#tasks:hover::-webkit-scrollbar-thumb {
+  background-color: #839acb;
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7; }
+
+.task {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 24rem 1fr;
+  gap: 1.2rem;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  padding: .7rem .7rem;
+  font-size: 1.7rem;
+  overflow-wrap: break-word;
+  border-radius: 20px;
+  background: #EFF6FC;
+  box-shadow: 5px 5px 8px #a3a7ab, -5px -5px 8px #ffffff; }
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .9rem;
+  justify-content: center; }
+  .buttons .done, .buttons .delete {
+    cursor: pointer;
+    align-self: center;
+    justify-self: center; }
+    .buttons .done img, .buttons .delete img {
+      display: block;
+      margin: auto 0 auto 0;
+      width: 2.2rem;
+      height: 2.2rem; }
+
+.lineThrough {
+  text-decoration: line-through; }
+
+/*# sourceMappingURL=style.css.map */
